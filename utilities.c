@@ -1,5 +1,10 @@
-#include<stdio.h>
 #include"utilities.h"
+#include<stdio.h>
+
+/* global variable */
+int infiniteLoopState;
+char playerTurn ;
+int row, col;
 
 
 /* Function Description: test all test cases of win (row, col, zigzag)
@@ -52,6 +57,8 @@ static void EndGame(char winnerID)
 
    /* Print a message to the winner */
     printf("The Winner is player %c \n",winnerID);
+	
+	delay(5);
 }
 
 
@@ -148,5 +155,11 @@ void check_playCondition(char playground[3][3]) {
     else {
         /* if a winner exist */
         EndGame(winnerID);
+    }
+}
+
+void delay(int count) {
+    for (long int i = 0; i < 100000*count; i++) { 
+        for (long int k = 0; k < 10000; k++) {}
     }
 }

@@ -1,10 +1,7 @@
 #ifndef UTILITIES_H_
 #define UTILITIES_H_
 
-/* global variable */
-int infiniteLoopState;
-char playerTurn ;
-int row, col;
+
 /****************************************************/
 /***           Function Declarations              ***/
 /***************************************************/
